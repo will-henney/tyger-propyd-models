@@ -1,0 +1,24 @@
+* Dynamic photoionization models of proplyds
+- Collaboraion between:
+  - Tom Haworth, QMW
+  - Tyger Peake, QMW
+  - Will Henney, IRyA-UNAM
+
+    
+** First Zoom call [2024-11-11 Mon 10:00]
+- Initial message from Tom
+  
+** Original models with Nahiely
+- These were done from 2011 to 2013
+- The code is in the repository proplyd-cloudy
+  - [[file:../../Work/Nahiely/proplyd-cloudy/]]
+  - https://github.com/will-henney/proplyd-cloudy
+  - This has the following components
+    - ~models/cloudycontrol~ is a python library for generating Cloudy input files, specialized to the proplyd problem
+    - ~models/~ has other python scripts for orchestrating the models in order to converge on a solution for different angles of incidence, and then to stitch together these solutions, rebinned to a cartesian 3d grid, which is used for calculating observational predictions (maps, spectra, etc) 
+- The output and other ancillary stuff are in the folder Nahiely-Will
+  - [[file:../Nahiely-Will/]]
+  - There is a git repo there, but it does not have everything added to it, and it is not published to github or anywhere else
+  - This contains a program [[file:../Nahiely-Will/wjh-cloudy.py][wjh-cloudy.py]] that supposedly does
+    : Generate Cloudy input files for proplyd models
+    I am not sure why this is not in the other repo
